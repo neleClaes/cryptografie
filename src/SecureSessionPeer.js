@@ -44,12 +44,12 @@ let tempObj = async(peer = null) => {
     }
 
     thisObj.send = (msg) => {
-        let encrypted = this.encrypt(msg);
-        SecureSessionPeer.setMsg9encrypted;
+        let encrypted = thisObj.encrypt(msg);
+        SecureSessionPeer.setMsg(encrypted);
     }
 
-    thisObj.recieve = () => {
-        return this.decrypt(msg_friend.ciphertext, msg_friend.nonce);
+    thisObj.receive = () => {
+        return thisObj.decrypt(msg_friend.ciphertext, msg_friend.nonce);
     }
 
     if(peer){
